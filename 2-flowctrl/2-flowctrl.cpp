@@ -4,12 +4,11 @@ int main()
 {
 	using namespace std;
 
-	int a, b;
-	a = 45;
-	b = 45;
-	if (a == b)
-	{
-		cout << "a is equal to b" << endl;
+	int n = 1;
+	while( n <= 10 ){
+		cout << n << endl;
+		n++;
 	}
+	
 	return 0;
 }
