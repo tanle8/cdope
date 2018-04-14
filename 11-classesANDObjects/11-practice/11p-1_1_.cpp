@@ -6,12 +6,27 @@ Assign the value of roll_no as '2' and that of name as "John" by creating an obj
 */
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-class 
+class Student 
+{   
+    public:
+        /* declare variable members */
+        string name;
+        int roll_no;
+};
 
 int main()
 {
-    return 0
+    Student st;
+    st.name = "John";
+    st.roll_no = 2;
+    cout << "name of st: " << st.name << endl;
+    cout << "roll_no of st: " << st.roll_no << endl;
+    cout << "It's all good." << endl;
+    
+    return 0;
 }
+
