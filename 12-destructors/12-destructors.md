@@ -1,3 +1,5 @@
+> The difference between ordinary and extraordinary is practice - Vladimir Horowitz
+
 # Destructor
 
 __Destructors__ are functions which are just the opposite of constructors.
@@ -83,4 +85,4 @@ int main()
 
 In this example, when the object `rt` of class __Rectangle__ was created, its constructor was called, not matter in what order we define it in the class. After that, its object called the functions `setDimension` and `getArea` and printed the area. At last, when the object went out of scope, its destructor got called.
 
-Note that the destructor will get automatically called even
+Note that the destructor will get automatically called even if we do not explicitly define it in the class.

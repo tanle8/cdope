@@ -20,6 +20,7 @@ class Student
 
 int main()
 {
+<<<<<<< HEAD
     Student st;
     st.name = "John";
     st.roll_no = 2;
@@ -30,3 +31,7 @@ int main()
     return 0;
 }
 
+=======
+    return 0;
+}
+>>>>>>> master
