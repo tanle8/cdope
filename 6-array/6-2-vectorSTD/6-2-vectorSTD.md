@@ -48,6 +48,7 @@ In the above declarations, we stored the marks of 5 students in a vector named _
 In std::vector also, the __size()__ function returns the length (i.e. number of elements in the vector).
 
 An example of std::vector:
+
 ```c++
 #include <iostream>
 #include <vector>
