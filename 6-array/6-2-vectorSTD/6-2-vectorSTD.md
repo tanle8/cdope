@@ -2,7 +2,7 @@
 
 We talked about std::array. We will explore __std::vector__
 
-Consider a case where you want to store the marks of the students of a class. But you don't know the number of students in the class and have only an approximate idea how the number. You can declare an array by specifying some array length.
+Consider a case where you want to store the marks of the students of a class. But you don't know the __number of students__ in the class and have only an approximate idea how the number. You can only declare an array by specifying some array length.
 
 Now, if the length of the array which you have specified during its declaration is smaller than the number of students, the the marks of all the students could not be stored. Also, if we declare its length much larger than the number of students, the unncessarily extra memory will be allocated to the array which is not required.
 
@@ -22,22 +22,24 @@ The declaration syntax of `std::vector` is the same as that of `std::array`, wit
 
     std::vector <data_type> array_name;
 
-For using std::vector, we need to include the __<vector>__ header in our program.
+For using std::vector, we need to include the __vector__ header in our program.
 
 Let's look at the declaration of a vector named __marks__ of type _int_ to store the marks of students.
 
-    std::vector <int> marks;
+    std::vector<int> marks;
 
 Now let's see how to initialize a vector. 
 
 ## Initialization of std::vector
 
 The initialization of an std::vector is also the same as that of std::array. We initialize an std::vector by either of the following ways:
+
     std::vector <int> marks = {50, 45, 47, 65, 80};
 
     std::vector <int> marks { {50, 45, 47, 65, 80} };
 
 We can also assign values to the vector after declaration as shown below:
+
     std::vector <int> marks;
     marks = {50, 45, 47, 65, 80};
 
@@ -74,7 +76,7 @@ Let's look at an example of passing a vector to a function.
 
 using namespace std;
 
-void printVector (const std::vector <int> &n)
+void printVector (const std::vector<int> &n)
 {
     for (int j = 0; j < n.size(); j++)
     {
@@ -93,23 +95,43 @@ int main()
 }
 ```
 
+- `void printVector (const std::vector<int> &n)` - __const__ is used here to prevent the compiler from making a copy of the vector and this enhances the performance. The passed vector will be __n__ in this function as `&n` is the parameter of the function 'printVector'.
+
 ## Member Functions
+
+std::vector also has a number of member functions which makes adding and deleting elements from the vector easier. Let's look at some of these.
 
 ### at()
 
+__at__ function is used to access the element at specified position (index). Let's see an example.
+
+In this example, `marks.at(2) = 74` assigned 74 to the third element (marks[2]) of the vector.
+
 ### front()
+
+The __front__ function returns the first element of a vector.
 
 ### back()
 
+The __back()__ function returns the last element of a vector.
+
 ### empty()
+
+This function checks whether a vector contains any element or not. It returns __1__ if the length of a vector is 0 and __0__ if it contains some element.
 
 ### resize()
 
+It resizes a vector so that it contains the specified number of elements. The new element will be assign a value 0.
+
 ### max_size()
+
+It returns the maximum number of elements that the vector can hold. This is not the amount of storage space currently allocated to the vector, but the __maximum size the vector could reach due to limitations in system implementations__.
 
 ### assign()
 
 ### push_back()
+
+This function adds a new element at the end of the vector (at the end of the last element of the vector), thus increasing the size of the vector by one.
 
 ### pop_back()
 
