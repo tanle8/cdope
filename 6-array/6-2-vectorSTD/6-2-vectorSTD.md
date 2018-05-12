@@ -135,11 +135,26 @@ This function adds a new element at the end of the vector (at the end of the las
 
 ### pop_back()
 
+This function removes the last element in the vector, thus reducing the size of the vector by one.
+
 ### capacity()
 
-### revert()
+This function returns the storage spacec allocated for the vector. In other words, it returns the number of elements which can be stored in the storage space allocated for the vector
+
+> Vector capacity is always greater the or equal to the vector size.
+
+The vector capacity is slightly greate than the vector size because the storage space allocated to a vector is always greate than that occupied by the number of elements in it so that if we add another element in the vector, the extra storage space could adjust it.
+
+### reverve()
+
+This function increases the capacity of the vector if the desired number of elements is greater than the capacity of the vector.
 
 ### insert()
+
+It inserts a new element in a vector before the element at the specified position. Let's see an example to understand this.
+
+```c++
+```
 
 ### earse()
 
@@ -149,4 +164,36 @@ This function adds a new element at the end of the vector (at the end of the las
 
 ## Multidimensional std::vector
 
+We can also make multidimensional std::vectors. This is similar to std::array. Let's look at the syntax to make a std::vector.
+
+    std::vector<std::vector<int>> v { {{1,2,3}, {4,5,6}} };
+
+This is similar to std::array. The inner vector (std::vector<int>) is a vector of integers and the outer vector is a vector of such inner vectors (std::vector<vector array>).
+
+Let's look at an example to make a multidimensional vector and access all its elements.
+
+```c++
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> v {{{1,2,3}, {4,5,6}, {7,8,9}}};
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << v[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+```
+
 ### Passing a multidimensional std::vector to a function
+
+A multidimensional std::vector is also passed to a function in a similar way a 1D vector is passed. Let's look at an example.
